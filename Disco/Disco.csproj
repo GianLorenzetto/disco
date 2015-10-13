@@ -34,6 +34,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunOctoPack>true</RunOctoPack>
+    <OctoPackPublishPackageToFileShare>Deployment\$(Configuration)\$(Platform)</OctoPackPublishPackageToFileShare>
+    <!--OctoPackPublishPackageToHttp>http://my-nuget-server/api/v2/package</OctoPackPublishPackageToHttp-->
+    <!--OctoPackPublishApiKey>API-ABCDEFGMYAPIKEY</OctoPackPublishApiKey-->
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
