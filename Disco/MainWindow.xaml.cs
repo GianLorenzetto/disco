@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using System.Diagnostics;
 using System.Windows;
 
 namespace Disco
@@ -11,7 +12,20 @@ namespace Disco
         public MainWindow()
         {
             InitializeComponent();
-            mainWindow.Title = "Disco - " + ConfigurationManager.AppSettings["TitleVersionString"];
+            mainWindow.Title = MakeTitleVersionString();
+        }
+
+        private static string MakeTitleVersionString()
+        {
+            var version = GetAssemblyVersionString();
+            return $"Disco - v{version} [{ConfigurationManager.AppSettings["TitleVersionString"]}]";
+        }
+
+        private static string GetAssemblyVersionString()
+        {
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            return fvi.FileVersion;
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
