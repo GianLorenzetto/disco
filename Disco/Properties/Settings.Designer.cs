@@ -22,14 +22,5 @@ namespace Disco.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("v0.0.0")]
-        public string TitleVersionString {
-            get {
-                return ((string)(this["TitleVersionString"]));
-            }
-        }
     }
 }

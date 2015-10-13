@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Configuration;
+using System.Windows;
 
 namespace Disco
 {
@@ -10,7 +11,7 @@ namespace Disco
         public MainWindow()
         {
             InitializeComponent();
-            mainWindow.Title = "Disco - " + Properties.Settings.Default.TitleVersionString;
+            mainWindow.Title = "Disco - " + ConfigurationManager.AppSettings["TitleVersionString"];
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
