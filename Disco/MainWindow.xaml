@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Disco"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Disco" Height="350" Width="525">
     <Grid>
         <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Margin="196,145,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="closeButton_Click"/>
 
