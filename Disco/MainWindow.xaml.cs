@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace Disco
         public MainWindow()
         {
             InitializeComponent();
+            mainWindow.Title = "Disco - " + Properties.Settings.Default.TitleVersionString;
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
